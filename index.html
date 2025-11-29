@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>City Care Hospital - Home</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#f4faff;}
+header{background:#0a74da;color:white;padding:15px 40px;display:flex;
+justify-content:space-between;align-items:center;font-size: larger;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;}
+nav ul li a{text-decoration:none;color:white;font-size:larger;}
+nav ul li a:hover{color:yellow;}
+h1{color:#f7f8f9;margin-bottom:20px;}
+h2{color:#0a74da;margin-bottom:15px;}
+p{font-size:larger;line-height:1.7;margin-bottom:15px;}
+.active {
+  display: block;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3') 
+  no-repeat center/cover;
+  padding: 100px;
+  text-align: center;
+  color: white;
+  height: 700px; 
+  width: 2200px; 
+  margin-top: 10px;
+}
+
+
+.slider{width:90%;height:800px;position:relative;overflow:hidden;
+    margin-top: 40px;margin-left:250px;}
+.slider img{width:90%;height:800px;position:absolute;opacity:0;
+    animation:slide 12s infinite;}
+
+.slider img:nth-child(1){animation-delay:0s;}
+.slider img:nth-child(2){animation-delay:4s;}
+.slider img:nth-child(3){animation-delay:8s;}
+
+@keyframes slide{
+0%{opacity:0;}
+20%{opacity:1;}
+40%{opacity:1;}
+60%{opacity:0;}
+100%{opacity:0;}
+}
+
+.container{padding:30px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:white;padding:15px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:6px;}
+
+footer{background:#0a74da;color:white;text-align:center;
+padding:15px 30px;margin-top:;font-size: larger;}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>City Care Hospital</h1>
+<nav>
+<ul>
+<li><h2><a href="index.html">Home</a></h2></li>
+<li><h2><a href="about2.html">About</a></h2></li>
+<li><h2><a href="services2.html">Services</a></h2></li>
+<li><h2><a href="doctors2.html">Doctors</a></h2></li>
+<li><h2><a href="gallery.html">Gallery</a></h2></li>
+<li><h2><a href="contact2.html">Contact</a></h2></li>
+<li><h2><a href="billing.html">Billing</a></h2></li>
+</ul>
+</nav>
+</header>
+
+<div id="index" class="page active">
+<div class="hero">
+    <strong><h1>Your Health, Our Priority</h1>
+    <p>Best doctors | Best facilities | Best care</p></strong>
+</div>
+
+<div class="container"><strong>
+<h2>Welcome to City Care Hospital</h2>
+<p>✔ We provide advanced healthcare services with modern technology,
+expert doctors and 24/7 support for patients.</p>
+<p>✔ Providing world-class healthcare with modern technology, experienced doctors, 
+and compassionate care. Your health is our top priority.</p></strong>
+
+</div>
+<div class="slider">
+<img src="https://images.pexels.com/photos/7578809/pexels-photo-7578809.jpeg">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907">
+
+</div>
+
+<div class="card"><strong>
+<h2>Why Choose Us?</h2>
+<p>✔ 24×7 Emergency Support & ICU Facility</p>
+<p>✔ Experienced Doctors across all specialties</p>
+<p>✔ Advanced Diagnostic & Laboratory Services</p>
+<p>✔ Affordable Packages & Insurance Support</p>
+<p>✔ Compassionate Patient Care & Counseling</p>
+<p>✔ State-of-the-art Equipment & Technology</p>
+</strong>
+</div>
+
+
+<div class="cards">
+<div class="card">
+<img src="./images/01.jpg">
+<strong>
+<h2>Emergency Care</h2>
+<p> hour emergency care with ambulance facility.</strong></p>
+</div>
+
+<div class="card">
+<img src="./images/o2.jpg">
+<strong>
+<h2>ICU Facility</h2>
+<p>Advanced ICU with life saving equipment.</strong></p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
+<strong>
+<h2>Qualified Doctors</h2>
+<p>Experienced doctors and medical staff.</strong></p>
+</div>
+</div>
+</div>
+
+<script>
+function showPage(pageId) {
+  let pages = document.querySelectorAll(".page");
+  pages.forEach(page => page.classList.remove("active"));
+
+  document.getElementById(pageId).classList.add("active");
+}
+
+// Appointment
+function bookAppointment(e) {
+  e.preventDefault();
+  alert("✅ Appointment booked successfully!");
+}
+
+// Doctor search
+function searchDoctor() {
+  let input = document.getElementById("searchDoctor").value.toLowerCase();
+  let doctors = document.querySelectorAll(".doctor");
+
+  doctors.forEach(doc => {
+    doc.style.display = doc.innerText.toLowerCase().includes(input) ? "block" : "none";
+  });
+}
+
+// Login
+function login(e) {
+  e.preventDefault();
+
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  if(user === "admin" && pass === "admin123") {
+    document.getElementById("adminPanel").style.display = "block";
+    document.getElementById("userPanel").style.display = "none";
+  } else {
+    document.getElementById("userPanel").style.display = "block";
+    document.getElementById("adminPanel").style.display = "none";
+  }
+}
+</script>
+
+
+<footer>
+  <strong><p>© 2025 City Care Hospital | Internship Project</p></strong>
+</footer>
+
+</body>
+</html>

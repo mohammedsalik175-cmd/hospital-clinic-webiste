@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient Billing - City Care Hospital</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#f4faff;}
+
+/* Header */
+header{
+    background:#0a74da;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;}
+nav ul li a{color:white;text-decoration:none;font-size:17px;}
+nav ul li a:hover{color:yellow;}
+
+/* Container */
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+h2{text-align:center;color:#0a74da;margin-bottom:20px;}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+input, select{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:15px;
+}
+
+.full{grid-column:span 2;}
+
+/* Services Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th, table td{
+    border:1px solid #ccc;
+    padding:8px;
+    text-align:center;
+}
+
+table th{
+    background:#0a74da;
+    color:white;
+}
+
+.total-box{
+    text-align:right;
+    margin-top:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* Buttons */
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+button{
+    padding:10px 20px;
+    background:#0a74da;
+    border:none;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{background:#0858a6;}
+
+footer{
+    background:#0a74da;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+/* Print only bill section */
+@media print {
+    header, .buttons, nav {display:none;}
+}
+</style>
+
+<script>
+function calculateTotal(){
+    let total = 0;
+
+    let fees = document.querySelectorAll(".fee");
+    fees.forEach(function(fee){
+        total += parseFloat(fee.value || 0);
+    });
+
+    document.getElementById("totalAmount").innerText = "₹ " + total;
+}
+
+// Add new row
+function addRow(){
+    let table = document.getElementById("billTable");
+    let row = table.insertRow();
+
+    row.innerHTML = `
+        <td><input type="text" placeholder="Service Name"></td>
+        <td><input type="number" class="fee" oninput="calculateTotal()" placeholder="Amount"></td>
+    `;
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h2>City Care Hospital</h2>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="appointment.html">Appointment</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<h2>Patient Billing Form</h2>
+
+<form>
+
+<input type="text" placeholder="Patient Name" required>
+<input type="text" placeholder="Patient ID" required>
+
+<input type="number" placeholder="Age">
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<input type="date">
+<input type="text" placeholder="Doctor Name">
+
+<input type="text" class="full" placeholder="Diagnosis Details">
+
+</form>
+
+<!-- Billing Table -->
+<table id="billTable">
+<tr>
+<th>Service/Medicine</th>
+<th>Amount (₹)</th>
+</tr>
+
+<tr>
+<td><input type="text" placeholder="Consultation Fee"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="300"></td>
+</tr>
+
+<tr>
+<td><input type="text" placeholder="Medicine Charges"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="500"></td>
+</tr>
+
+<tr>
+<td><input type="text" placeholder="Lab Test"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="400"></td>
+</tr>
+</table>
+
+<div class="total-box">
+Total Amount: <span id="totalAmount">₹ 1200</span>
+</div>
+
+<div class="buttons">
+<button onclick="addRow()">➕ Add Service</button>
+<button onclick="window.print()">🖨 Print Bill</button>
+</div>
+
+</div>
+
+<footer>
+© 2025 City Care Hospital | Billing Department
+</footer>
+
+<script>
+calculateTotal();
+</script>
+
+</body>
+</html>

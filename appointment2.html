@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment - City Care Hospital</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4faff;
+}
+
+header{
+    background:#0a74da;
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+}
+
+nav ul li a:hover{
+    color:yellow;
+}
+
+/* Banner */
+.banner{
+    width:100%;
+    height:300px;
+    background-image:url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:40px;
+    font-weight:bold;
+}
+
+/* Form Section */
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#0a74da;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+form input, form select, form textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+form textarea{
+    grid-column:span 2;
+    height:80px;
+    resize:none;
+}
+
+form button{
+    grid-column:span 2;
+    padding:12px;
+    background:#0a74da;
+    color:white;
+    border:none;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:#0858a6;
+}
+
+/* Extra Images */
+.appointment-images{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.appointment-images img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+footer{
+    background:#0a74da;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:50px;
+}
+</style>
+
+<script>
+function bookAppointment(){
+    alert("✅ Appointment Booked Successfully! Our team will contact you soon.");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h2>City Care Hospital</h2>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="doctors.html">Doctors</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="appointment.html">Appointment</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="banner">
+Book Your Appointment
+</div>
+
+<div class="container">
+<h2>Appointment Form</h2>
+
+<form onsubmit="event.preventDefault(); bookAppointment();">
+<input type="text" placeholder="Patient Full Name" required>
+<input type="tel" placeholder="Mobile Number" required>
+<input type="email" placeholder="Email Address">
+<input type="date" required>
+<input type="time" required>
+
+<select required>
+<option value="">Select Department</option>
+<option>Cardiology</option>
+<option>Neurology</option>
+<option>Orthopedics</option>
+<option>Pediatrics</option>
+<option>Dermatology</option>
+<option>Dental</option>
+</select>
+
+<select required>
+<option value="">Select Doctor</option>
+<option>Dr. A. Sharma</option>
+<option>Dr. K. Patel</option>
+<option>Dr. R. Khan</option>
+<option>Dr. Neha Gupta</option>
+<option>Dr. Imran Sheikh</option>
+</select>
+
+<textarea placeholder="Describe Your Problem"></textarea>
+
+<button type="submit">Book Appointment</button>
+</form>
+
+<!-- Images Section -->
+<div class="appointment-images">
+<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464">
+<img src="https://images.unsplash.com/photo-1580281657527-47f249e8f0aa">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<img src="https://images.unsplash.com/photo-1576091160540-b879b1d4d44d">
+</div>
+
+</div>
+
+<footer>
+© 2025 City Care Hospital | Book Appointment Online
+</footer>
+
+</body>
+</html>
