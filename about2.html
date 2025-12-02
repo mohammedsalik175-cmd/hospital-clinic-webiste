@@ -3,17 +3,22 @@
 <head>
 <title>About - City Care Hospital</title>
 <style>
-body{margin:0;font-family:Arial;background:#f2f8ff;margin:0;}
+body{margin:0;font-family:Arial;background:#f2f8ff;margin:0;overflow-x: hidden;}
 header{background:#0a74da;color:white;padding:15px 40px;display:flex;
 justify-content:space-between;align-items:center;font-size: larger;}
 nav ul{list-style:none;display:flex;}
 nav ul li{margin-left:20px;justify-content: space-between;}
 nav ul li a{text-decoration:none;color:white;font-size:larger;}
 nav ul li a:hover{color:yellow;}
-h1{color:#f7f8f9;margin-bottom:20px;}
-h2{color:#0a74da;margin-bottom:15px;}
-p{font-size:larger;line-height:1.7;margin-bottom:15px;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size:x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size:x-large;}
 .container{padding:30px;}
+.gallary{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.gall{background:white;padding:15px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.gall img{object-fit:cover;border-radius:6px;}
+.gall img{
+    width:100%;height:500px;margin-bottom:50px;
+}
 .footer {
   background: #05205d;
   color: #cbd5e1;
@@ -25,7 +30,7 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -82,8 +87,8 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
 <li><h2><a href="index.html">Home</a></h2></li>
 <li><h2><a href="about2.html">About</a></h2></li>
 <li><h2><a href="services2.html">Services</a></h2></li>
-<li><h2><a href="doctors2.html">Doctors</a></h2></li>
-<li><h2><a href="gallery.html">Gallery</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
 <li><h2><a href="contact2.html">Contact</a></h2></li>
 <li><h2><a href="billing.html">Billing</a></h2></li>
 </ul>
@@ -92,53 +97,101 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
 
 <div class="container"><strong>
 <h2>About Our Hospital</h2>
-<p>✔ We are one of the leading multi-speciality hospitals in the city 
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ We are one of the leading multi-speciality hospitals in the city 
 providing quality healthcare services.</p><br>
-<p>✔ City Care Hospital has been providing top-notch healthcare for over 20 years.</p><br> 
-<p>✔ Our state-of-the-art facility is equipped with advanced medical equipment and
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ City Care Hospital has been providing top-notch healthcare for over 20 years.</p><br> 
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ Our state-of-the-art facility is equipped with advanced medical equipment and
 staffed by highly skilled professionals.</p><br>
-<p>✔ We believe in holistic care, patient comfort,and quality treatment.</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ We believe in holistic care, patient comfort,and quality treatment.</p>
 </strong>
 <br><br>
-<div class="gallery">
-<img src="./images/04.jpg"
- style="width:730px;height:500px;">
-<img src="./images/07.jpg"
-style="width:730px;height:500px;">
-<img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde"
-style="width:730px;height:500px;">
-<br><br>
-<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12"
-style="width:730px;height:500px;">
-<img src="./images/06.jpg"
-style="width:730px;height:500px;">
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118"
-style="width:730px;height:500px;">
-<br><br>
-<img src="./images/o2.jpg"
-style="width:730px;height:500px;">
-<img src="./images/10.jpg"
-style="width:730px;height:500px;">
-<img src="./images/09.jpg"
-style="width:730px;height:500px;">
+<div class="gallary">
+  <div class="gall">
+<img src="./images/04.jpg" style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Patient Drop/Pick Area Board</h2>
+</strong>
+</div>
 
+<div class="gall">
+<img src="./images/07.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Sitting Area</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/13.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Quality Medicine /HealthCare Medication /Pharmacy Supplies</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/01.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Sergical Team</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/06.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Hospital Ward/ Patient Room</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118"
+style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Operation Theater Surgeons</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/15.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Surgery Room</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/10.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Care,Support and Compassion</h2>
+</strong>
+</div>
+
+<div class="gall">
+<img src="./images/09.jpg"style="width:100%;height:500px;margin-bottom:50px;">
+<strong>
+  <h2 style="text-align: center;">Laboratory</h2>
+</strong>
 </div>
 </div>
 
 <div class="card">
 <strong><h2>Our Mission</h2>
-<p>✔ To provide compassionate, high-quality healthcare accessible to everyone.</p></strong>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ To provide compassionate, high-quality healthcare accessible to everyone.</p></strong>
 </div>
 <br><br>
 <div class="card">
 <strong><h2>Our Vision</h2>
-<p> ✔To be the leading medical center known for excellence in patient care and innovation.</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;"> 
+✔To be the leading medical center known for excellence in patient care and innovation.</p>
 </strong>
 </div>
 <br><br>
 <div class="card">
 <strong><h2>Our Values</h2>
-<p>✔ Integrity, empathy, innovation, and patient satisfaction drive everything we do.</p></strong>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ Integrity, empathy, innovation, and patient satisfaction drive everything we do.</p></strong>
 </div>
 </div>
 <br><br>

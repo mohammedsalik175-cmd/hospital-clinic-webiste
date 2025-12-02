@@ -3,36 +3,271 @@
 <head>
 <title>Services</title>
 <style>
-body{font-family:Arial;background:#f2f8ff;margin:0;}
+body{margin:0;font-family:Arial;background:#f2f8ff;margin:0;overflow-x: hidden;}
 header{background:#0a74da;color:white;padding:15px 40px;display:flex;
-justify-content:space-between;}
-nav ul{display:flex;list-style:none;}
-nav ul li{margin-left:20px;}
-nav ul li a{color:white;text-decoration:none;}
-.services{padding:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.services img{width:100%;height:180px;object-fit:cover;border-radius:5px;}
+justify-content:space-between;align-items:center;font-size: larger;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;justify-content: space-between;}
+nav ul li a{text-decoration:none;color:white;font-size:larger;}
+nav ul li a:hover{color:yellow;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size: x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size:x-large;text-align: center;}
+.container{padding:30px;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:white;padding:15px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.card img{object-fit:cover;border-radius:6px;}
+.card img{
+    width:100%;height:500px;margin-bottom:50px;
+}
+
+.footer {
+  background: #05205d;
+  color: #cbd5e1;
+  padding: 60px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col ul li:hover {
+  color: #38bdf8;
+}
+
+.footer-social a {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+</style>
+
 </style>
 </head>
 <body>
 
 <header>
-<h2>City Care Hospital</h2>
+<h1>City Care Hospital</h1>
 <nav>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
+<li><h2><a href="index.html">Home</a></h2></li>
+<li><h2><a href="about2.html">About</a></h2></li>
+<li><h2><a href="services2.html">Services</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
+<li><h2><a href="contact2.html">Contact</a></h2></li>
+<li><h2><a href="billing.html">Billing</a></h2></li>
 </ul>
 </nav>
 </header>
-
-<div class="services">
-<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464">
-<img src="https://images.unsplash.com/photo-1612277793894-1c209ed82f7d">
-<img src="https://images.unsplash.com/photo-1580281657527-47f249e8f0aa">
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
-<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<br><br>
+<div class="container">
+<strong><h1 style="color: #0a74da;font-size: x-large;text-align:center;">Our Services</h1>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;margin-left: 20px;"> 
+Hospitals provide a wide range of services, including emergency care, inpatient and outpatient services, 
+and specialty care like dermatology, cardiology, and general physician.<br> They also offer diagnostic services (radiology, lab tests),
+pharmacy, and support services such as physiotherapy, nutrition, and emergency transportation. 
+</p></strong>
+<br><br>
+<div class="cards">
+    <div class="card">
+<img src="./images/16.jpg">
+<strong>
+<h2>General Checkup</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+health assessments including lab reports and consultations with experts.</p>
+</strong>
 </div>
+
+<div class="card">
+<img src="./images/17.jpg">
+<strong>
+<h2>Dental Care</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Complete dental treatments including surgery, braces, and cosmetic dentistry.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/18.jpg">
+<strong>
+<h2>Eye Care</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Advanced eye exams, laser treatment, cataract surgery, and glasses prescription.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/19.jpg">
+<strong>
+<h2>Heart Care</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+ECG, ECHO, stress tests and consultations by top cardiologists.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/20.jpg">
+<strong>
+<h2>Pediatric Care</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Specialized treatments for infants and children, vaccination and growth monitoring.</p></strong>
+</div>
+
+<div class="card">
+<img src="./images/21.jpg">
+<strong>
+<h2>Emergency Services</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+24×7 ambulance, ICU and life-saving treatments with trained staff.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/27.jpg">
+<strong>
+<h2>Cardiology</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Provide specialized medical care for the Diagnoses, treatment and prevention and blood vessel diseases.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/26.jpg">
+<strong>
+<h2>Neurology</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Diagnoses and treats disorders of the nurvous system, which includes the brain, spinal cord, nerves and muscles.</p>
+</strong>
+</div>
+
+<div class="card">
+<img src="./images/28.jpg">
+<strong>
+<h2>Dermatology</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+Medical,Cosmetic,and Surgical Treatment for Skin,Hair and Nail Conditions.</p>
+</strong>
+</div>
+
+
+</div>
+</div>
+
+<br><br>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>CONTACT US</h3>
+      <p>📍 7227 East Palo Verde Dr,<br>Scottsdale, AZ 85250</p>
+      <p>📞 +1 (480) 567-5736</p>
+      <p>✉️ info@hospital.com</p>
+
+      <p>📍 309 Orchard Way,<br>Denver, CO 80007</p>
+      <p>📞 +1 (720) 898-9221</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>SERVICES</h3>
+      <ul>
+        <li>Patient Management</li>
+        <li>Medical Billing</li>
+        <li>Lab Information System</li>
+        <li>Radiology Integration</li>
+        <li>EHR / EMR Support</li>
+        <li>Telemedicine</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>PRODUCTS</h3>
+      <ul>
+        <li>Hospital ERP</li>
+        <li>E-Prescription</li>
+        <li>OPD Management</li>
+        <li>IPD Management</li>
+        <li>Pharmacy Module</li>
+        <li>Clinic CRM</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>COMPANY</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Clients</li>
+        <li>Careers</li>
+        <li>Life at Hospital</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-col">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li>support@hospital.com</li>
+        <li>helpdesk@hospital.com</li>
+        <li>support1@hospital.com</li>
+        <li>support2@hospital.com</li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#" title="WhatsApp">🟢</a>
+        <a href="#" title="Email">✉️</a>
+        <a href="#" title="Phone">📞</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hospital Clinic — All Rights Reserved</p>
+  </div>
+</footer>
+
 
 </body>
 </html>

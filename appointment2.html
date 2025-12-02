@@ -4,38 +4,18 @@
 <title>Book Appointment - City Care Hospital</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4faff;
-}
-
-header{
-    background:#0a74da;
-    color:white;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-}
-
-nav ul li{
-    margin-left:20px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-size:17px;
-}
-
-nav ul li a:hover{
-    color:yellow;
+body{margin:0;font-family:Arial;background:#f4faff;overflow-x: hidden;}
+header{background:#0a74da;color:white;padding:15px 40px;display:flex;
+justify-content:space-between;align-items:center;font-size: larger;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;}
+nav ul li a{text-decoration:none;color:white;font-size:larger;}
+nav ul li a:hover{color:yellow;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size: x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size: x-large;}
+p{font-size:larger;line-height:1.7;margin-bottom:15px;}
+.active {
+  display: block;
 }
 
 /* Banner */
@@ -55,7 +35,7 @@ nav ul li a:hover{
 
 /* Form Section */
 .container{
-    max-width:900px;
+    max-width:1500px;
     margin:40px auto;
     background:white;
     padding:30px;
@@ -89,8 +69,8 @@ form textarea{
 }
 
 form button{
-    grid-column:span 2;
-    padding:12px;
+    
+    padding:10px 20px;
     background:#0a74da;
     color:white;
     border:none;
@@ -98,6 +78,7 @@ form button{
     border-radius:5px;
     cursor:pointer;
     transition:0.3s;
+    margin-right: 700px;
 }
 
 form button:hover{
@@ -119,13 +100,63 @@ form button:hover{
     border-radius:8px;
 }
 
-footer{
-    background:#0a74da;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:50px;
+.footer {
+  background: #05205d;
+  color: #cbd5e1;
+  padding: 60px 20px 20px;
+  font-family: Arial, sans-serif;
 }
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col ul li:hover {
+  color: #38bdf8;
+}
+
+.footer-social a {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
 </style>
 
 <script>
@@ -138,16 +169,16 @@ function bookAppointment(){
 <body>
 
 <header>
-<h2>City Care Hospital</h2>
+<h1>City Care Hospital</h1>
 <nav>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="doctors.html">Doctors</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="appointment.html">Appointment</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><h2><a href="index.html">Home</a></h2></li>
+<li><h2><a href="about2.html">About</a></h2></li>
+<li><h2><a href="services2.html">Services</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
+<li><h2><a href="contact2.html">Contact</a></h2></li>
+<li><h2><a href="billing.html">Billing</a></h2></li>
 </ul>
 </nav>
 </header>
@@ -156,8 +187,9 @@ function bookAppointment(){
 Book Your Appointment
 </div>
 
+
 <div class="container">
-<h2>Appointment Form</h2>
+<h2><strong>Appointment Form</strong></h2><br><br>
 
 <form onsubmit="event.preventDefault(); bookAppointment();">
 <input type="text" placeholder="Patient Full Name" required>
@@ -170,41 +202,114 @@ Book Your Appointment
 <option value="">Select Department</option>
 <option>Cardiology</option>
 <option>Neurology</option>
-<option>Orthopedics</option>
-<option>Pediatrics</option>
-<option>Dermatology</option>
+<option>Pediatric Specialist</option>
+<option>Heart</option>
+<option>Eye</option>
 <option>Dental</option>
+<option>Dermatologist</option>
+<option>General Physician</option>
+<option>Orthopedic Surgeon</option>
 </select>
+<br><br>
 
 <select required>
 <option value="">Select Doctor</option>
-<option>Dr. A. Sharma</option>
-<option>Dr. K. Patel</option>
-<option>Dr. R. Khan</option>
-<option>Dr. Neha Gupta</option>
-<option>Dr. Imran Sheikh</option>
+<option>Dr. Aditi Sharma</option>
+<option>Dr. Rohit Singh</option>
+<option>Dr. Lail margret</option>
+<option>Dr. Kamla Bedi</option>
+<option>Dr. Neha Kapoor</option>
+<option>Dr. Elina nurozi</option>
+<option>Dr. Sameer Malhotra</option>
+<option>Dr. Imran Shaikh</option>
+<option>Dr. Mohan Patel</option>
 </select>
+<br><br>
 
-<textarea placeholder="Describe Your Problem"></textarea>
+<textarea placeholder="Describe Your Problem"></textarea><br><br>
 
-<button type="submit">Book Appointment</button>
+<center><button type="submit">Book Appointment</button></center><br><br>
 </form>
 
-<!-- Images Section -->
-<div class="appointment-images">
-<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464">
-<img src="https://images.unsplash.com/photo-1580281657527-47f249e8f0aa">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
-<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
-<img src="https://images.unsplash.com/photo-1576091160540-b879b1d4d44d">
 </div>
+<br><br>
 
-</div>
+<footer class="footer">
+  <div class="footer-container">
 
-<footer>
-© 2025 City Care Hospital | Book Appointment Online
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>CONTACT US</h3>
+      <p>📍 7227 East Palo Verde Dr,<br>Scottsdale, AZ 85250</p>
+      <p>📞 +1 (480) 567-5736</p>
+      <p>✉️ info@hospital.com</p>
+
+      <p>📍 309 Orchard Way,<br>Denver, CO 80007</p>
+      <p>📞 +1 (720) 898-9221</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>SERVICES</h3>
+      <ul>
+        <li>Patient Management</li>
+        <li>Medical Billing</li>
+        <li>Lab Information System</li>
+        <li>Radiology Integration</li>
+        <li>EHR / EMR Support</li>
+        <li>Telemedicine</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>PRODUCTS</h3>
+      <ul>
+        <li>Hospital ERP</li>
+        <li>E-Prescription</li>
+        <li>OPD Management</li>
+        <li>IPD Management</li>
+        <li>Pharmacy Module</li>
+        <li>Clinic CRM</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>COMPANY</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Clients</li>
+        <li>Careers</li>
+        <li>Life at Hospital</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-col">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li>support@hospital.com</li>
+        <li>helpdesk@hospital.com</li>
+        <li>support1@hospital.com</li>
+        <li>support2@hospital.com</li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#" title="WhatsApp">🟢</a>
+        <a href="#" title="Email">✉️</a>
+        <a href="#" title="Phone">📞</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hospital Clinic — All Rights Reserved</p>
+  </div>
 </footer>
+
 
 </body>
 </html>

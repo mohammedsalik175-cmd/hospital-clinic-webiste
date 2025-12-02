@@ -4,15 +4,15 @@
 <title>City Care Hospital - Home</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f4faff;}
+body{margin:0;font-family:Arial;background:#f4faff; width:100vw; overflow-x: hidden;}
 header{background:#0a74da;color:white;padding:15px 40px;display:flex;
 justify-content:space-between;align-items:center;font-size: larger;}
 nav ul{list-style:none;display:flex;}
 nav ul li{margin-left:20px;}
 nav ul li a{text-decoration:none;color:white;font-size:larger;}
 nav ul li a:hover{color:yellow;}
-h1{color:#f7f8f9;margin-bottom:20px;}
-h2{color:#0a74da;margin-bottom:15px;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size:x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size: x-large;text-align: center;}
 p{font-size:larger;line-height:1.7;margin-bottom:15px;}
 .active {
   display: block;
@@ -25,19 +25,20 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
   text-align: center;
   color: white;
   height: 700px; 
-  width: 2200px; 
+  width: 100vw; 
   margin-top: 10px;
 }
 
 
-.slider{width:90%;height:800px;position:relative;overflow:hidden;
-    margin-top: 40px;margin-left:250px;}
-.slider img{width:90%;height:800px;position:absolute;opacity:0;
+.slider{width:100%;height:800px;position:relative;overflow:hidden;
+    margin-top: 40px;}
+.slider img{width:100%;height:800px;position:absolute;opacity:0;
     animation:slide 12s infinite;}
 
 .slider img:nth-child(1){animation-delay:0s;}
 .slider img:nth-child(2){animation-delay:4s;}
 .slider img:nth-child(3){animation-delay:8s;}
+.slider img:nth-child(4){animation-delay:12s;}
 
 @keyframes slide{
 0%{opacity:0;}
@@ -63,7 +64,7 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
-  max-width: 1400px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -120,8 +121,8 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
 <li><h2><a href="index.html">Home</a></h2></li>
 <li><h2><a href="about2.html">About</a></h2></li>
 <li><h2><a href="services2.html">Services</a></h2></li>
-<li><h2><a href="doctors2.html">Doctors</a></h2></li>
-<li><h2><a href="gallery.html">Gallery</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
 <li><h2><a href="contact2.html">Contact</a></h2></li>
 <li><h2><a href="billing.html">Billing</a></h2></li>
 </ul>
@@ -131,56 +132,69 @@ p{font-size:larger;line-height:1.7;margin-bottom:15px;}
 <div id="index" class="page active">
 <div class="hero">
     <strong><h1>Your Health, Our Priority</h1>
-    <p>Best doctors | Best facilities | Best care</p></strong>
+    <p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+      Best doctors | Best facilities | Best care</p></strong>
 </div>
 
 <div class="container"><strong>
-<h2>Welcome to City Care Hospital</h2>
-<p>✔ We provide advanced healthcare services with modern technology,
+<h2 style="text-align: left;">Welcome to City Care Hospital</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+  ✔ We provide advanced healthcare services with modern technology,
 expert doctors and 24/7 support for patients.</p>
-<p>✔ Providing world-class healthcare with modern technology, experienced doctors, 
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+  ✔ Providing world-class healthcare with modern technology, experienced doctors, 
 and compassionate care. Your health is our top priority.</p></strong>
 
 </div>
 <div class="slider">
-<img src="https://images.pexels.com/photos/7578809/pexels-photo-7578809.jpeg">
+  <img src="./images/12.jpg">
+  <img src="https://images.pexels.com/photos/7578809/pexels-photo-7578809.jpeg">
 <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
 <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907">
 
 </div>
 
 <div class="card"><strong>
-<h2>Why Choose Us?</h2>
-<p>✔ 24×7 Emergency Support & ICU Facility</p>
-<p>✔ Experienced Doctors across all specialties</p>
-<p>✔ Advanced Diagnostic & Laboratory Services</p>
-<p>✔ Affordable Packages & Insurance Support</p>
-<p>✔ Compassionate Patient Care & Counseling</p>
-<p>✔ State-of-the-art Equipment & Technology</p>
+<h2 style="text-align: left;">Why Choose Us?</h2>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ 24×7 Emergency Support & ICU Facility</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ Experienced Doctors across all specialties</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+✔ Advanced Diagnostic & Laboratory Services</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+  ✔ Affordable Packages & Insurance Support</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+  ✔ Compassionate Patient Care & Counseling</p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;">
+  ✔ State-of-the-art Equipment & Technology</p>
 </strong>
 </div>
 
 
 <div class="cards">
 <div class="card">
-<img src="./images/01.jpg" style="width: 700px;height:500px ;">
+<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12" style="width: 100%;height:500px;">
 <strong>
 <h2>Emergency Care</h2>
-<p> hour emergency care with ambulance facility.</strong></p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;"> 
+hour emergency care with ambulance facility.</strong></p>
 </div>
 
 <div class="card">
-<img src="./images/o2.jpg" style="width: 700px;height:500px ;">
+<img src="./images/11.jpg" style="width: 100%;height:500px;">
 <strong>
 <h2>ICU Facility</h2>
-<p>Advanced ICU with life saving equipment.</strong></p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;">
+  Advanced ICU with life saving equipment.</strong></p>
 </div>
 
 <div class="card">
-<img src="./images/03.jpg" style="width: 700px;height:500px ;">
+<img src="./images/03.jpg" style="width: 100%;height:500px;">
 <strong>
 <h2>Qualified Doctors</h2>
-<p>Experienced doctors and medical staff.</strong></p>
+<p style="font-size:x-large;line-height:1.7;margin-bottom:15px;text-align: center;">
+  Experienced doctors and medical staff.</strong></p>
 </div>
 </div>
 </div>

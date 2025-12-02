@@ -3,26 +3,243 @@
 <head>
 <title>Doctors</title>
 <style>
-body{font-family:Arial;background:#f8fbff;margin:0;}
-header{background:#0a74da;color:white;padding:15px 40px;}
-.team{padding:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.team img{width:100%;height:180px;object-fit:cover;}
+body{margin:0;font-family:Arial;background:#f2f8ff;margin:0;overflow-x: hidden;}
+header{background:#0a74da;color:white;padding:15px 40px;display:flex;
+justify-content:space-between;align-items:center;font-size: larger;}
+nav ul{list-style:none;display:flex;}
+nav ul li{margin-left:20px;justify-content: space-between;}
+nav ul li a{text-decoration:none;color:white;font-size:larger;}
+nav ul li a:hover{color:yellow;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size: x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size:x-large;text-align: center;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:white;padding:15px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.card img{object-fit:cover;border-radius:6px;}
+
+.footer {
+  background: #05205d;
+  color: #cbd5e1;
+  padding: 60px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  width: 100%;
+  margin: auto;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col ul li:hover {
+  color: #38bdf8;
+}
+
+.footer-social a {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
 </style>
 </head>
 <body>
 
 <header>
-<h2>Our Doctors</h2>
+<h1>City Care Hospital</h1>
+<nav>
+<ul>
+<li><h2><a href="index.html">Home</a></h2></li>
+<li><h2><a href="about2.html">About</a></h2></li>
+<li><h2><a href="services2.html">Services</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
+<li><h2><a href="contact2.html">Contact</a></h2></li>
+<li><h2><a href="billing.html">Billing</a></h2></li>
+</ul>
+</nav>
 </header>
+<br><br>
 
-<div class="team">
-<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d">
-<img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54">
-<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-<img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b6">
-<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464">
-<img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12">
+<strong><h1 style="color: #0a74da;font-size: xx-large;">Best Qualified Docters</h1>
+    <br><br>
+
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Rohit Singh</h3>
+<p style="font-size: x-larger;">Neurologist – 6 Years Experience. Expert in brain & nerve disorders.</p>
 </div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Aditi Sharma</h3>
+<p style="font-size:x-larger">Cardiologist – 7 Years Experience. Expert in heart surgeries & patient care.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Sameer Malhotra</h3>
+<p style="font-size:x-larger">Dermatologist – 5 Years Experience. Skin treatments & cosmetic dermatology.</p>
+</div>
+
+
+<div class="card">
+<img src="https://images.pexels.com/photos/8460094/pexels-photo-8460094.jpeg"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Imran Shaikh</h3>
+<p style="font-size:x-larger;">General Physician – 10 Years Experience. Specialist in chronic illness management.</p>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr.lail margret</h3>
+<p style="font-size:x-larger">Pediatric Specialist – 4 Years Experience. Caring for child health & wellness.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550831107-1553da8c8464"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Mohan Patel</h3>
+<p style="font-size: x-larger;">Orthopedic Surgeon – 15 Years Experience. Joint replacement & sports injuries.</p>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg"
+style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr. Elina nurozi</h3>
+<p style="font-size: x-larger;">Dental care – 5 Years Experience. Joint replacement & sports injuries.</p>
+</div>
+
+<div class="card">
+<img src="./images/22.jpg"style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr.Neha Kapoor</h3>
+<p style="font-size: x-larger;">Eye Care– 4 Years Experience. Joint replacement & sports injuries.</p>
+</div>
+
+<div class="card">
+<img src="./images/25.jpg"style="width:100%;height:700px;">
+<h3 style="font-size: x-larger;">Dr.Kamla Bedi</h3>
+<p style="font-size: x-larger;">Heart care – 12 Years Experience. Joint replacement & sports injuries.</p>
+</div>
+
+
+</div>
+<br><br>
+
+<div><strong>
+    <br><br>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>CONTACT US</h3>
+      <p>📍 7227 East Palo Verde Dr,<br>Scottsdale, AZ 85250</p>
+      <p>📞 +1 (480) 567-5736</p>
+      <p>✉️ info@hospital.com</p>
+
+      <p>📍 309 Orchard Way,<br>Denver, CO 80007</p>
+      <p>📞 +1 (720) 898-9221</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>SERVICES</h3>
+      <ul>
+        <li>Patient Management</li>
+        <li>Medical Billing</li>
+        <li>Lab Information System</li>
+        <li>Radiology Integration</li>
+        <li>EHR / EMR Support</li>
+        <li>Telemedicine</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>PRODUCTS</h3>
+      <ul>
+        <li>Hospital ERP</li>
+        <li>E-Prescription</li>
+        <li>OPD Management</li>
+        <li>IPD Management</li>
+        <li>Pharmacy Module</li>
+        <li>Clinic CRM</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>COMPANY</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Clients</li>
+        <li>Careers</li>
+        <li>Life at Hospital</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-col">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li>support@hospital.com</li>
+        <li>helpdesk@hospital.com</li>
+        <li>support1@hospital.com</li>
+        <li>support2@hospital.com</li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#" title="WhatsApp">🟢</a>
+        <a href="#" title="Email">✉️</a>
+        <a href="#" title="Phone">📞</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hospital Clinic — All Rights Reserved</p>
+  </div>
+</footer>
 
 </body>
 </html>

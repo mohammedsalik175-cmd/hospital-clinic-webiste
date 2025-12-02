@@ -4,21 +4,19 @@
 <title>Patient Billing - City Care Hospital</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f4faff;}
-
-/* Header */
-header{
-    background:#0a74da;
-    color:white;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+body{margin:0;font-family:Arial;background:#f4faff;overflow-x: hidden;}
+header{background:#0a74da;color:white;padding:15px 40px;display:flex;
+justify-content:space-between;align-items:center;font-size: larger;}
 nav ul{list-style:none;display:flex;}
 nav ul li{margin-left:20px;}
-nav ul li a{color:white;text-decoration:none;font-size:17px;}
+nav ul li a{text-decoration:none;color:white;font-size:larger;}
 nav ul li a:hover{color:yellow;}
+h1{color:#f7f8f9;margin-bottom:20px;font-size: x-large;}
+h2{color:#0a74da;margin-bottom:15px;font-size: x-large;}
+p{font-size:larger;line-height:1.7;margin-bottom:15px;}
+.active {
+  display: block;
+}
 
 /* Container */
 .container{
@@ -91,13 +89,63 @@ button{
 
 button:hover{background:#0858a6;}
 
-footer{
-    background:#0a74da;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:40px;
+.footer {
+  background: #05205d;
+  color: #cbd5e1;
+  padding: 60px 20px 20px;
+  font-family: Arial, sans-serif;
 }
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 8px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-col ul li:hover {
+  color: #38bdf8;
+}
+
+.footer-social a {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
 
 /* Print only bill section */
 @media print {
@@ -132,17 +180,21 @@ function addRow(){
 </head>
 <body>
 
-<header>
-<h2>City Care Hospital</h2>
+    <header>
+<h1>City Care Hospital</h1>
 <nav>
 <ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="appointment.html">Appointment</a></li>
-<li><a href="billing.html">Billing</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><h2><a href="index.html">Home</a></h2></li>
+<li><h2><a href="about2.html">About</a></h2></li>
+<li><h2><a href="services2.html">Services</a></h2></li>
+<li><h2><a href="docters2.html">Doctors</a></h2></li>
+<li><h2><a href="appointment2.html">Appointment</a></h2></li>
+<li><h2><a href="contact2.html">Contact</a></h2></li>
+<li><h2><a href="billing.html">Billing</a></h2></li>
 </ul>
 </nav>
 </header>
+
 
 <div class="container">
 
@@ -176,22 +228,22 @@ function addRow(){
 
 <tr>
 <td><input type="text" placeholder="Consultation Fee"></td>
-<td><input type="number" class="fee" oninput="calculateTotal()" value="300"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="0"></td>
 </tr>
 
 <tr>
 <td><input type="text" placeholder="Medicine Charges"></td>
-<td><input type="number" class="fee" oninput="calculateTotal()" value="500"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="0"></td>
 </tr>
 
 <tr>
 <td><input type="text" placeholder="Lab Test"></td>
-<td><input type="number" class="fee" oninput="calculateTotal()" value="400"></td>
+<td><input type="number" class="fee" oninput="calculateTotal()" value="0"></td>
 </tr>
 </table>
 
 <div class="total-box">
-Total Amount: <span id="totalAmount">₹ 1200</span>
+Total Amount: <span id="totalAmount">₹ 0</span>
 </div>
 
 <div class="buttons">
@@ -201,8 +253,81 @@ Total Amount: <span id="totalAmount">₹ 1200</span>
 
 </div>
 
-<footer>
-© 2025 City Care Hospital | Billing Department
+<br><br>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h3>CONTACT US</h3>
+      <p>📍 7227 East Palo Verde Dr,<br>Scottsdale, AZ 85250</p>
+      <p>📞 +1 (480) 567-5736</p>
+      <p>✉️ info@hospital.com</p>
+
+      <p>📍 309 Orchard Way,<br>Denver, CO 80007</p>
+      <p>📞 +1 (720) 898-9221</p>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>SERVICES</h3>
+      <ul>
+        <li>Patient Management</li>
+        <li>Medical Billing</li>
+        <li>Lab Information System</li>
+        <li>Radiology Integration</li>
+        <li>EHR / EMR Support</li>
+        <li>Telemedicine</li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>PRODUCTS</h3>
+      <ul>
+        <li>Hospital ERP</li>
+        <li>E-Prescription</li>
+        <li>OPD Management</li>
+        <li>IPD Management</li>
+        <li>Pharmacy Module</li>
+        <li>Clinic CRM</li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h3>COMPANY</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Clients</li>
+        <li>Careers</li>
+        <li>Life at Hospital</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-col">
+      <h3>SUPPORT</h3>
+      <ul>
+        <li>support@hospital.com</li>
+        <li>helpdesk@hospital.com</li>
+        <li>support1@hospital.com</li>
+        <li>support2@hospital.com</li>
+      </ul>
+
+      <div class="footer-social">
+        <a href="#" title="WhatsApp">🟢</a>
+        <a href="#" title="Email">✉️</a>
+        <a href="#" title="Phone">📞</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Hospital Clinic — All Rights Reserved</p>
+  </div>
 </footer>
 
 <script>
